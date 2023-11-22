@@ -21,7 +21,7 @@ spec:
         command: ["sh", "-c", "echo $VAULT_SECRET_USER && echo $VAULT_SECRET_PASSWORD && echo $USER_JfrogToken && echo $USER_ArgocdUsername && echo going to sleep... && sleep 10000"]
         env:
         - name: VAULT_SECRET_USER
-          value: <path:ST0117/edge-config/data/secrets#username>
+          value: <path:ST0117/edge-config/data/secrets#username1>
         - name: VAULT_SECRET_PASSWORD
           value: <path:ST0117/edge-config/data/secrets#password>
         - name:  USER_JfrogToken
