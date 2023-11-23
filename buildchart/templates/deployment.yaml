@@ -23,7 +23,7 @@ spec:
         - name: TEST_KEY
           value: <path:glcg/ip/data/secrets#ip>
         - name: VAULT_SECRET_USER
-          value: <path:ST0117/edge-config/data/secrets#username>
+          value: <path:ST0117/edge-config/data/secrets#username1>
         - name: VAULT_SECRET_PASSWORD
           value: <path:ST0117/edge-config/data/secrets#password>
         - name:  USER_JfrogToken
