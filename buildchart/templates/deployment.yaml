@@ -18,13 +18,9 @@ spec:
       - image: nginx
         imagePullPolicy: Always
         name: nginx
-        command: ["sh", "-c", "echo $VAULT_SECRET_USER && echo $VAULT_SECRET_PASSWORD && echo $USER_JfrogToken && echo $USER_ArgocdUsername && echo going to sleep... && sleep 10000"]
+        command: ["sh", "-c", "echo $VAULT_SECRET_USER && echo $VAULT_SECRET_PASSWORD && echo going to sleep... && sleep 10000"]
         env:
         - name: VAULT_SECRET_USER
-          value: <path:ST0117/edge-config/data/secrets#username3>
+          value: <path:edge-vm/edge-config/data/secrets#username>
         - name: VAULT_SECRET_PASSWORD
-          value: <path:ST0117/edge-config/data/secrets#password>
-        - name:  USER_JfrogToken
-          value: <path:gateway-config-v2/data/secrets#vaultGlobalArgocdUsername>
-        - name: USER_ArgocdUsername
-          value: <path:gateway-config-v2/data/secrets#vaultGlobalArgocdUsername>
+          value: <path:edge-vm/edge-config/data/secrets#password>
