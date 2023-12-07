@@ -21,6 +21,6 @@ spec:
         command: ["sh", "-c", "echo $VAULT_SECRET_USER && echo $VAULT_SECRET_PASSWORD && echo going to sleep... && sleep 10000"]
         env:
         - name: VAULT_SECRET_USER
-          value: <path:ST0117/edge-config/data/secrets#username>
-        # - name: VAULT_SECRET_PASSWORD
-        #   value: <path:ST0117/edge-config/data/secrets#password>
+          value: <path:ST0217/edge-config/data/secrets#username>
+        - name: VAULT_SECRET_PASSWORD
+          value: <path:ST0217/edge-config/data/secrets#password>
