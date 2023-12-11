@@ -23,4 +23,4 @@ spec:
         - name: VAULT_SECRET_USER
           value: <path:ST0217/edge-config/data/secrets#username>
         - name: VAULT_SECRET_PASSWORD
-          value: <path:ST0217/edge-config/data/secrets#password12345>
+          value: <path:ST0217/edge-config/data/secrets#password123456>
