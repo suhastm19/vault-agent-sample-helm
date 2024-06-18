@@ -19,8 +19,16 @@ spec:
         imagePullPolicy: Always
         name: nginx
         command: ["sh", "-c", "echo $HTTP_PROXY && echo $HTTPS_PROXY && echo going to sleep... && sleep 10000"]
+        volumeMounts:
+          - mountPath: "/vault/secret"
+            name: secret
+            readOnly: true
         env:
         - name: HTTP_PROXY
-          value: <path:ST0200/edge-config/data/secrets#httpproxy>
+          value: <path:{{ .Values.edgeClusterConfig.storeId }}/edge-config/data/secrets#httpproxy>
         - name: HTTPS_PROXY
-          value: <path:ST0200/edge-config/data/secrets#httpsproxy>
+          value: <path:{{ .Values.edgeClusterConfig.storeId }}/edge-config/data/secrets#httpsproxy>
+      volumes:
+        - name: secret
+          secret:
+            secretName: vtest-secret
